@@ -1,3 +1,6 @@
+// IBE 102 25V Oblig 2 av Benjamin Espeseth
+// https://chatgpt.com/share/67f284f3-64c0-8008-9b09-f8d0accc798b
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,19 +8,24 @@
         .invalid {
             background-color: pink;
         }
+
+        .active-button {
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
-    <input type="number" id="tall1">
-    <input type="number" id="tall2">
+    <input type="text" id="tall1">
+    <button onclick="byttVerdier()">Bytt</button>
+    <input type="text" id="tall2">
     <br>
-    <button onclick="adder()">a+b</button>
-    <button onclick="subtraher()">a-b</button>
-    <button onclick="multipliser()">a*b</button>
-    <button onclick="diviser()">a/b</button>
-    <button onclick="potens()">a**b</button>
-    <button onclick="heltallsdivisjon()">a//b</button>
-    <button onclick="modulus()">a%b</button>
+    <button onclick="velgOperasjon(this, adder)">a+b</button>
+    <button onclick="velgOperasjon(this, subtraher)">a-b</button>
+    <button onclick="velgOperasjon(this, multipliser)">a*b</button>
+    <button onclick="velgOperasjon(this, diviser)">a/b</button>
+    <button onclick="velgOperasjon(this, potens)">a**b</button>
+    <button onclick="velgOperasjon(this, heltallsdivisjon)">a//b</button>
+    <button onclick="velgOperasjon(this, modulus)">a%b</button>
     <br>
     Resultat:
     <span id="resultatfelt"></span>
@@ -33,12 +41,17 @@
             }
         }
 
-        // Legg til event listeners for inputvalidering
         document.getElementById("tall1").addEventListener("input", validerInput);
         document.getElementById("tall2").addEventListener("input", validerInput);
 
         function hentTall(id) {
             return parseFloat(document.getElementById(id).value);
+        }
+
+        function velgOperasjon(knapp, operasjon) {
+            document.querySelectorAll("button").forEach(btn => btn.classList.remove("active-button"));
+            knapp.classList.add("active-button");
+            operasjon();
         }
 
         function adder() {
@@ -67,6 +80,19 @@
 
         function modulus() {
             document.getElementById("resultatfelt").innerHTML = hentTall("tall1") % hentTall("tall2");
+        }
+
+        // Ny funksjon: Bytt verdier mellom feltene
+        function byttVerdier() {
+            const felt1 = document.getElementById("tall1");
+            const felt2 = document.getElementById("tall2");
+            const midlertidig = felt1.value;
+            felt1.value = felt2.value;
+            felt2.value = midlertidig;
+
+            // Trigg validering etter bytte
+            validerInput({ target: felt1 });
+            validerInput({ target: felt2 });
         }
     </script>
 </body>

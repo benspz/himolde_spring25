@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<!-- beregninger med to tall -->
 <html>
+<head>
+    <style>
+        .invalid {
+            background-color: pink;
+        }
+    </style>
+</head>
 <body>
-    <input type="text" id="tall1">
-    <input type="text" id="tall2">
+    <input type="number" id="tall1">
+    <input type="number" id="tall2">
     <br>
     <button onclick="adder()">a+b</button>
     <button onclick="subtraher()">a-b</button>
@@ -17,70 +23,51 @@
     <span id="resultatfelt"></span>
 
     <script>
+        function validerInput(event) {
+            const el = event.target;
+            const tall = parseFloat(el.value);
+            if (isNaN(tall)) {
+                el.classList.add("invalid");
+            } else {
+                el.classList.remove("invalid");
+            }
+        }
+
+        // Legg til event listeners for inputvalidering
+        document.getElementById("tall1").addEventListener("input", validerInput);
+        document.getElementById("tall2").addEventListener("input", validerInput);
+
+        function hentTall(id) {
+            return parseFloat(document.getElementById(id).value);
+        }
+
         function adder() {
-            var el1 = document.getElementById("tall1");
-            var el2 = document.getElementById("tall2");
-            var t1 = parseFloat(el1.value);
-            var t2 = parseFloat(el2.value);
-            var utfelt = document.getElementById("resultatfelt");
-            utfelt.innerHTML = t1 + t2;
+            document.getElementById("resultatfelt").innerHTML = hentTall("tall1") + hentTall("tall2");
         }
 
         function subtraher() {
-            var el1 = document.getElementById("tall1");
-            var el2 = document.getElementById("tall2");
-            var t1 = parseFloat(el1.value);
-            var t2 = parseFloat(el2.value);
-            var utfelt = document.getElementById("resultatfelt");
-            utfelt.innerHTML = t1 - t2;
+            document.getElementById("resultatfelt").innerHTML = hentTall("tall1") - hentTall("tall2");
         }
 
         function multipliser() {
-            var el1 = document.getElementById("tall1");
-            var el2 = document.getElementById("tall2");
-            var t1 = parseFloat(el1.value);
-            var t2 = parseFloat(el2.value);
-            var utfelt = document.getElementById("resultatfelt");
-            utfelt.innerHTML = t1 * t2;
+            document.getElementById("resultatfelt").innerHTML = hentTall("tall1") * hentTall("tall2");
         }
 
         function diviser() {
-            var el1 = document.getElementById("tall1");
-            var el2 = document.getElementById("tall2");
-            var t1 = parseFloat(el1.value);
-            var t2 = parseFloat(el2.value);
-            var utfelt = document.getElementById("resultatfelt");
-            utfelt.innerHTML = t1 / t2;
+            document.getElementById("resultatfelt").innerHTML = hentTall("tall1") / hentTall("tall2");
         }
 
         function potens() {
-            var el1 = document.getElementById("tall1");
-            var el2 = document.getElementById("tall2");
-            var t1 = parseFloat(el1.value);
-            var t2 = parseFloat(el2.value);
-            var utfelt = document.getElementById("resultatfelt");
-            utfelt.innerHTML = t1 ** t2;
+            document.getElementById("resultatfelt").innerHTML = hentTall("tall1") ** hentTall("tall2");
         }
 
         function heltallsdivisjon() {
-            // https://stackoverflow.com/questions/4228356/how-to-perform-an-integer-division-and-separately-get-the-remainder-in-javascr
-            var el1 = document.getElementById("tall1");
-            var el2 = document.getElementById("tall2");
-            var t1 = parseFloat(el1.value);
-            var t2 = parseFloat(el2.value);
-            var utfelt = document.getElementById("resultatfelt");
-            utfelt.innerHTML = (t1 / t2) >> 0;
+            document.getElementById("resultatfelt").innerHTML = (hentTall("tall1") / hentTall("tall2")) >> 0;
         }
 
         function modulus() {
-            var el1 = document.getElementById("tall1");
-            var el2 = document.getElementById("tall2");
-            var t1 = parseFloat(el1.value);
-            var t2 = parseFloat(el2.value);
-            var utfelt = document.getElementById("resultatfelt");
-            utfelt.innerHTML = t1 % t2
+            document.getElementById("resultatfelt").innerHTML = hentTall("tall1") % hentTall("tall2");
         }
-
     </script>
 </body>
 </html>

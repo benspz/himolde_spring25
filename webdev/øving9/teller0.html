@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- teller0.html -->
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <p>
+    Teller: <span id="tellerfelt"> </span> (trykk knapp for å endre verdi).
+  </p>
+  <button onclick="økTeller();">Øk teller</button>
+  <button onclick="reduserTeller();">Reduser teller</button>
+  <script>
+    let teller=0; /* huske verdien på telleren */
+    function økTeller() {
+      teller++; /* øk tellerens verdi  med 1 */
+      el = document.getElementById ('tellerfelt'); /* finn element som skal endres */
+      el.innerHTML = teller; /* endre elementet websiden */
+    }
+
+    function reduserTeller() {
+      teller--; /* øk tellerens verdi  med 1 */
+      el = document.getElementById ('tellerfelt'); /* finn element som skal endres */
+      el.innerHTML = teller; /* endre elementet websiden */
+    }
+  </script>
+</body>
+</html>

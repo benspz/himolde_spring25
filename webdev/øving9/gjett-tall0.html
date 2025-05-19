@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- gjett et tall (utgangspunkt) -->
+<html>
+<body>
+  <input type="text" id="tall1">
+  <button id="gjettBtn" onclick="gjett()" disabled>Gjett</button>
+  <button onclick="start()">Start</button>
+  <button id="hjelpBtn" onclick="hjelp()">Hjelp</button>
+  <br>
+  Resultat: <span id="resultatfelt"></span><br>
+  Antall forsøk: <span id="antallforsok"></span><br>
+  
+
+  <script>
+    let hemmeligtall; /* huske tallet */
+    function start () {
+      /* lag et tilfeldig tall mellom 0 og 9 */
+      hemmeligtall = Math.floor( Math.random()* 10 );
+      /* vis tallet i konsollet i utviklervinduet (F12) */
+      console.log("Det hemmelige tallet er: " + hemmeligtall)
+
+      const gjettBtn = document.getElementById("gjettBtn");
+      gjettBtn.innerHTML = `Gjett (${hemmeligtall})`;
+      gjettBtn.disabled = false;
+
+      const antallforsok = document.getElementById("antallforsok");
+      antallforsok.innerHTML = 0;
+
+      const innfelt = document.getElementById("tall1");
+      innfelt.value = "";
+
+
+    }
+    function gjett () {
+      /* hent tallet fra inputfeltet */
+      const el1 = document.getElementById("tall1");
+      const inntall = parseFloat(el1.value);
+      const antallforsok = document.getElementById("antallforsok");
+
+      const utfelt = document.getElementById("resultatfelt");
+      /* sjekk om tallet er korrekt */
+      if ( inntall == hemmeligtall) {
+        utfelt.innerHTML = "Riktig";
+        el1.style.border = "2px solid green";
+      }
+      else {
+        utfelt.innerHTML = "Feil";
+        el1.style.border = "2px solid red";
+        antallforsok.innerHTML = parseInt(antallforsok.innerHTML) + 1;
+
+      }
+    }
+
+    function hjelp() {
+      alert("Hjelp: Tallet er mellom 0 og 9");
+    }
+  </script>
+
+</body>
+</html>

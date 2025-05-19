@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- heksa0, utgangspunkt -->
+<html>
+<body>
+  <h1>Heksadesimale siffer</h1>
+  <!-- Vi ønsker å endre egenskapen column-count i kontainer-elementet.
+       Denne egenskapen er default lik 1.
+       I Javascript skrives den columnCount (bindestrek fjernes + camel casing) -->
+  <button onclick="document.getElementById('kontainer').style.columnCount='1'">1 kolonner</button>
+
+  <button onclick="document.getElementById('kontainer').style.columnCount='2'">2 kolonner</button>
+
+  <button onclick="document.getElementById('kontainer').style.columnCount='3'">3 kolonner</button>
+
+  <button onclick="document.getElementById('kontainer').style.columnCount='4'">4 kolonner</button>
+
+  <button onclick="document.getElementById('kontainer').style.columnRule='4px dotted red'">Ramme på</button>
+
+  <button onclick="document.getElementById('kontainer').style.columnRule='0px dotted red'">Ramme av</button>
+  <div id="kontainer">
+    <div>0</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+  </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const N = 3;
+const N = 5;
 const ul = document.createElement("ul");
 
 function lagMeny() {

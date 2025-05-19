@@ -6,7 +6,7 @@ function lagMeny() {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.textContent = "Prosjekt " + i;
-        a.href = "prosjekt" + i + "/index" + i + ".html";
+        a.href = `prosjekt${i}/index${i}.html`;
         li.appendChild(a);
         ul.appendChild(li);
         }
@@ -15,3 +15,4 @@ const menyDiv = document.getElementById("meny");
 menyDiv.appendChild(ul);
 
 lagMeny();
+

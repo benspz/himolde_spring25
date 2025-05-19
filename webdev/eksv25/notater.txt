@@ -1,0 +1,29 @@
+Noen notater/begrunnelser for avgjørelser:
+
+Oppgave 1: 
+    Denne var ganske rett frem da den ikke trengte noe stil/funksjonalitet utenom selve linkene.
+    index.html filene i de forskjellige prosjekt mappene er alle kopier av hverandre men med tallene i linkene endret.
+
+Oppgave 2:
+    Her måtte jeg ha litt hjelp av chatgpt, hovedsaklig for syntax da det fort blir litt surr når man lærer flere språk 
+    samtidig. Jeg visste med en gang at jeg ville ha ei for-løkke som ville iterere N antall ganger for å bygge lista.
+    Etter det var det bare å skape elementene, appendere de i riktig rekkefølge (ul --> li) også skrive de til dokumentet.
+    For selve visninga valgte jeg å bruke et div element da dette skaper en blokk.
+    I index3 erstattet vi konstanten N med et parameter. Dette gjør det f.eks lettere å teste i konsoll da man kan 
+    kalle lagMeny(N) og velge fritt hva N skal være.
+
+Oppgave 3: 
+    Her skulle vi teste 4 forskjellige attributter og hvordan de påvirker svaksynte/blinde brukere iht. hyperlinker.
+    Min private PC kjører Linux, spesifikt Fedora 42 med Gnome 48. Dette har allerede en ganske god skjermleser innebygd
+    i innstillinger applikasjonen. Jeg brukte denne i alle 4 scenarioene. 
+
+Oppgave 4:
+    I denne oppgaven skulle vi endre utseende på html sidene våres. Jeg var litt usikker på om vi skulle endre dette
+    på bare index4 eller om jeg retroaktivt skulle endre det for .html filene opprettet i tidligere oppgaver da
+    oppgaveteksten sa vi skulle redigere index4 spesifikt, men senere sa vi skulle f.eks sette felles bakgrunn på alle
+    html filene. Jeg konkluderte med at jeg skulle endre alle de tidligere også.
+
+    Siden jeg brukte klasser for de fleste stilregelene i stil.css så brukte jeg samme "stylesheet" på alle html filene.
+    Dette gjor at alle fikk fellesendringene som bakgrunnsbilde, grå bakgrunn på link når musen er over den og 
+    rød tekst istedenfor den standard lilla etter en link har blitt besøkt. Resten av stilregelene vil kun legges til 
+    elementer i de respektive klassene.

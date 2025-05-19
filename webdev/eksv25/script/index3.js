@@ -5,7 +5,7 @@ function lagMeny(N) {  //https://chatgpt.com/share/682ae82f-5b20-8009-98b6-1eb3e
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.textContent = "Prosjekt " + i;
-        a.href = "prosjekt" + i + "/index" + i + ".html";
+        a.href = `prosjekt${i}/index${i}.html`; 
         li.appendChild(a);
         ul.appendChild(li);
         }

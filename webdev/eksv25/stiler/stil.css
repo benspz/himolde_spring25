@@ -1,0 +1,25 @@
+body {
+    background-image: url("../media/taras_horizon.jpg");
+}
+
+
+a:visited {
+    color: red
+}
+
+a:hover {
+    background-color: grey;
+}
+
+.prosjekt {
+    border: green dotted 2px;
+}
+
+.viktig::before {   /*https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements*/
+    content: "Viktig: ";
+    font-weight: bold;
+}
+
+.blokkemeny {
+    list-style-type: none; /*https://www.w3schools.com/cssref/pr_list-style-type.asp*/
+}

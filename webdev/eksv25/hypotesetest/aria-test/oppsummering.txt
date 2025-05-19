@@ -1,0 +1,12 @@
+Hypotese: "Vi kan ikke støtte svaksynte med attributtet aria-label"
+
+Aria er et sett med attributter som er laget for å gi mere kontekst for skjermlesere.
+For eksempel, aria-label attributtet vil leses opp istedenfor link teksten.
+Dette kan gjøre at det blir mer forvirrende for svaksynte om label og den originale
+link teksten ikke stemmer overens. I alle fall delvis.
+
+Jeg testet med den innebygde skjermleseren i Gnome 48 (OS er Fedora 42)
+og når jeg satt aria-label til "screenreader test" så las den opp det istedenfor "Prosjekt 1"
+
+Ressurser:
+https://usability.yale.edu/web-accessibility/articles/links#aria

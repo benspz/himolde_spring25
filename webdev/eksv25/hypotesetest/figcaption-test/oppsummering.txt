@@ -1,0 +1,16 @@
+Hypotese: "Vi kan ikke støtte svaksynte med figcaption-elementet"
+
+Figcaption er ganske likt alt attributtet for bilder, men er mer fleksibelt.
+Du kan kapsle en figur (bilde, tabell, blokk med kode o.l) og gi den en beskrivende "caption".
+Dette vil bli lest opp av en skjermleser og er nyttig for å beskrive visuelle elementer for svaksynte og blinde.
+
+Når det kommer til dette tilfellet virker det som den gjør mer vondt enn godt da den leser opp caption
+etter link teksten og kan forvirre svaksynte til å tro at det er linken istedenfor.
+
+Jeg testet dette ved å kapsle det første liste (li) elementet inn i et <figure> element,
+for så å sette en tilhørende <figcaption>. Denne ble lest opp av skjermleseren min (Innebygd i Gnome 48 (Fedora 42))
+men var ikke veldig hjelpsom når det kom til å finne linken.
+
+Ressurser:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure
+https://developer.mozilla.org/en-US/docs/Glossary/Accessible_description

@@ -1,0 +1,15 @@
+Hypotese: "Vi kan ikke støtte svaksynte med title-attributtet"
+
+Tittel attributten lager et like tooltip som dukker opp når man holder musa/pekeren over hyperlinken.
+Dette er vanligvis brukt til å gi en beskrivelse av hvor linken går hen.
+
+For skjermlesere er dette for det meste unødvendig informasjon og i mange tilfeller ikke lest opp.
+Det hjelpe mye mer å ha korrekt og nyttig formaterte linker,
+for eksempel så kan linker som "trykk her" være forvirrende for svaksynte som benytter seg av skjermlesere.
+
+I likhet med de andre testet jeg med den innebygde skjermleseren i Gnome 48 (Fedora 42) og
+den igorerte title attributtet.
+
+Ressurser: 
+https://usability.yale.edu/web-accessibility/articles/links
+https://www.a11yproject.com/posts/title-attributes/

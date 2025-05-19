@@ -1,0 +1,12 @@
+Hypotese: "Vi kan ikke  støtte svaksynte med alt-attributtet"
+
+Alt attributtet eller alt-text er noe vi kan legge til f.eks bilde elementer for å gi en
+skriflig beskrivelse av hva bildet inneholder.
+Dette kan hjelpe svaksynte da en skjermleser vil lese opp alt attributtet, 
+men er også nyttig når bildet ikke kan vises eller ikke er tilgjengelig.
+F.eks ved en død link eller ustøttet format.
+Da vi ikke bruker noen bilder i vår hovedmeny så vil ikke alt attributtet hjelpe noe.
+
+Jeg testet ved å legge til alt="" i <a> elementet også sette href til en tom string,
+men dette gjor ingen forskjell. (Annet enn at linken var død).
+I tillegg testet jeg med den innebygde skjermleseren i Gnome 48 (Fedora 42) og den las den ikke opp.
